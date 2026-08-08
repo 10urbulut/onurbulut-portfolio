@@ -120,6 +120,24 @@
   /* ---------- hero ---------- */
   .hero{padding-top:74px;padding-bottom:30px}
   @media(max-width:640px){.hero{padding-top:44px;padding-bottom:20px}}
+  .hrow{display:flex;align-items:flex-start;gap:52px}
+  .hcol{flex:1 1 auto;min-width:0}
+  .portrait{flex:0 0 auto;width:232px;margin:8px 0 0;line-height:0}
+  .portrait svg{width:100%;height:auto;display:block;border-radius:50%;
+    border:1px solid var(--line-strong);background:var(--surface-2);box-shadow:var(--sh)}
+  .pf-wash{fill:var(--accent-wash)}
+  .pf-skin{fill:var(--surface)}
+  .pf-hair{fill:var(--surface);stroke:var(--ink-soft);stroke-width:3;
+    stroke-linecap:round;stroke-linejoin:round}
+  .pf-dot{fill:var(--ink-soft)}
+  .pf-line{fill:none;stroke:var(--ink-soft);stroke-width:3;
+    stroke-linecap:round;stroke-linejoin:round}
+  .pf-soft{fill:none;stroke:var(--muted);stroke-width:2.6;
+    stroke-linecap:round;stroke-linejoin:round}
+  .pf-acc{fill:var(--accent-wash);stroke:var(--accent);stroke-width:3;
+    stroke-linecap:round;stroke-linejoin:round}
+  @media(max-width:980px){.hrow{flex-direction:column-reverse;gap:28px}
+    .portrait{width:104px;margin-top:0}}
   .hero .lead{max-width:22ch;font-family:var(--mono);font-size:12px;
     letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
     display:flex;align-items:center;gap:10px;margin-bottom:26px}
@@ -439,6 +457,8 @@
 <main>
   <!-- HERO -->
   <div class="wrap hero">
+    <div class="hrow">
+    <div class="hcol">
     <div class="lead rv">Flutter · .NET · Native iOS · Go · Türkiye</div>
     <h1 class="rv" data-tr="Ürünleri uçtan uca tasarlayıp geliştiriyorum — <em>App&nbsp;Store</em> ekranından escrow <em>durum&nbsp;makinesine</em> kadar.">I design and build products end&#8209;to&#8209;end — from the <em>App&nbsp;Store</em> screen down to the escrow <em>state&nbsp;machine</em>.</h1>
     <p class="sub rv" data-tr="Kartepe, Kocaeli'den kıdemli bir mobil yazılım mühendisi — App Store ve Google Play'de <b>5+ yıl</b> ve <b>13+ uygulama</b>; çalışan, sözleşmeli geliştirici ve kendi ürünlerimin kurucusu olarak. Tüm yığını üstlenmekte rahatım: önde Flutter &amp; SwiftUI, arkada Go ve .NET Core.">Senior mobile software engineer from Kartepe, Kocaeli — <b>5+ years</b> and <b>13+ apps</b> shipped to the App Store &amp; Google Play, as an employee, a contractor, and the founder of my own products. I'm comfortable owning the full stack: Flutter &amp; SwiftUI up front, Go and .NET Core behind.</p>
@@ -447,6 +467,31 @@
       <a class="btn cvbtn" data-tr="CV indir (PDF)">Download CV (PDF)</a>
       <a class="btn" href="mailto:10urbulut@gmail.com" data-tr="İletişime geç">Get in touch</a>
       <span class="avail"><span class="dot"></span><span data-tr="Kıdemli pozisyonlara ve seçili projelere açığım">Open to senior roles &amp; select projects</span></span>
+    </div>
+    </div>
+
+    <figure class="portrait rv">
+      <svg viewBox="0 0 240 240" role="img" aria-labelledby="pftitle">
+        <title id="pftitle" data-tr="Onur Bulut'un çizim portresi">Illustrated portrait of Onur Bulut</title>
+        <defs><clipPath id="pfclip"><circle cx="120" cy="120" r="120"/></clipPath></defs>
+        <g clip-path="url(#pfclip)">
+          <circle class="pf-wash" cx="120" cy="102" r="76"/>
+          <path class="pf-acc" d="M36 240c2-38 24-58 62-68l22 26 22-26c38 10 60 30 62 68Z"/>
+          <path class="pf-line" d="M98 172l22 26 22-26"/>
+          <path class="pf-skin" d="M105 148v18c0 8 30 8 30 0v-18Z"/>
+          <path class="pf-line" d="M105 150v16M135 150v16"/>
+          <path class="pf-skin" d="M78 96c0-32 16-48 42-48s42 16 42 48c0 20-6 38-18 48-8 7-15 10-24 10s-16-3-24-10c-12-10-18-28-18-48Z"/>
+          <path class="pf-line" d="M78 96c0-32 16-48 42-48s42 16 42 48c0 20-6 38-18 48-8 7-15 10-24 10s-16-3-24-10c-12-10-18-28-18-48Z"/>
+          <path class="pf-line" d="M79 99c-7-2-11 4-9 11s8 9 12 6M161 99c7-2 11 4 9 11s-8 9-12 6"/>
+          <path class="pf-hair" d="M76 100C79 86 85 75 95 68C104 62 109 68 119 73C129 78 140 76 146 69C155 75 161 86 164 100C170 60 151 39 120 39C89 39 70 60 76 100Z"/>
+          <path class="pf-soft" d="M101 63c12 6 26 8 39 4"/>
+          <path class="pf-soft" d="M98 94q8-6 17-1M125 93q9-5 17 1"/>
+          <circle class="pf-dot" cx="106" cy="106" r="3.4"/>
+          <circle class="pf-dot" cx="134" cy="106" r="3.4"/>
+          <path class="pf-soft" d="M120 110v13q0 4-5 5M108 134q12 8 24-1"/>
+        </g>
+      </svg>
+    </figure>
     </div>
 
     <div class="ledger rv">
