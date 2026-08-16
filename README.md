@@ -71,4 +71,4 @@ build/
 
 ---
 
-Contact: 10urbulut@gmail.com · [linkedin.com/in/10urbulut](https://linkedin.com/in/10urbulut) · [github.com/10urbulut](https://github.com/10urbulut)
+Contact: iam@onurbulut.dev · [linkedin.com/in/10urbulut](https://linkedin.com/in/10urbulut) · [github.com/10urbulut](https://github.com/10urbulut)
