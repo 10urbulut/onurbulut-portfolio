@@ -18,44 +18,44 @@
 <meta name="twitter:image" content="https://onurbulut.dev/og-image.png">
 <style>
   :root{
-    --ground:#EBEDE9; --surface:#FCFCFA; --surface-2:#F3F4EF;
-    --ink:#14181A; --ink-soft:#41474A; --muted:#6C7370;
-    --line:#DBDDD5; --line-strong:#C7CABF;
-    --accent:#0C7C6E; --accent-soft:#0A5A50; --accent-wash:#0c7c6e14;
-    --ok:#2C7A4B; --warn:#9A6414; --info:#2A55C4;
+    --ground:#F2EEE6; --surface:#FBF9F5; --surface-2:#F0EBE2;
+    --ink:#1C1A17; --ink-soft:#48433C; --muted:#706960;
+    --line:#E2DBCF; --line-strong:#CFC6B7;
+    --accent:#B03D19; --accent-soft:#8A2F12; --accent-wash:#b03d1914; --on-accent:#FFFFFF;
+    --ok:#3D7A3A; --warn:#8F6A12; --info:#2F55B8;
     --serif:"Charter","Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"Helvetica Neue",Arial,sans-serif;
     --mono:ui-monospace,"SF Mono","SFMono-Regular",Menlo,"Cascadia Code","Roboto Mono",monospace;
     --maxw:1140px;
-    --sh:0 1px 2px rgba(20,24,26,.04),0 6px 22px rgba(20,24,26,.06);
-    --sh-lift:0 2px 6px rgba(20,24,26,.06),0 20px 46px rgba(20,24,26,.11);
+    --sh:0 1px 2px rgba(28,22,16,.05),0 6px 22px rgba(28,22,16,.07);
+    --sh-lift:0 2px 6px rgba(28,22,16,.07),0 20px 46px rgba(28,22,16,.12);
   }
   @media (prefers-color-scheme:dark){
     :root{
-      --ground:#0D1211; --surface:#151B1A; --surface-2:#1B2221;
-      --ink:#E8ECE7; --ink-soft:#B4BBB6; --muted:#7B837E;
-      --line:#232C2A; --line-strong:#2E3937;
-      --accent:#33D4BE; --accent-soft:#6FE6D5; --accent-wash:#33d4be1a;
-      --ok:#5FC98A; --warn:#D6A24C; --info:#7C9BF2;
+      --ground:#13110F; --surface:#1B1815; --surface-2:#221E1A;
+      --ink:#EEE8DF; --ink-soft:#BFB6A9; --muted:#8A8276;
+      --line:#2B2622; --line-strong:#3A332D;
+      --accent:#F08A5D; --accent-soft:#F6AE8C; --accent-wash:#f08a5d1a; --on-accent:#1D0D06;
+      --ok:#6CC98A; --warn:#D9B24E; --info:#86A2F5;
       --sh:0 1px 2px rgba(0,0,0,.4),0 8px 26px rgba(0,0,0,.4);
       --sh-lift:0 2px 8px rgba(0,0,0,.45),0 26px 54px rgba(0,0,0,.55);
     }
   }
   :root[data-theme="light"]{
-    --ground:#EBEDE9; --surface:#FCFCFA; --surface-2:#F3F4EF;
-    --ink:#14181A; --ink-soft:#41474A; --muted:#6C7370;
-    --line:#DBDDD5; --line-strong:#C7CABF;
-    --accent:#0C7C6E; --accent-soft:#0A5A50; --accent-wash:#0c7c6e14;
-    --ok:#2C7A4B; --warn:#9A6414; --info:#2A55C4;
-    --sh:0 1px 2px rgba(20,24,26,.04),0 6px 22px rgba(20,24,26,.06);
-    --sh-lift:0 2px 6px rgba(20,24,26,.06),0 20px 46px rgba(20,24,26,.11);
+    --ground:#F2EEE6; --surface:#FBF9F5; --surface-2:#F0EBE2;
+    --ink:#1C1A17; --ink-soft:#48433C; --muted:#706960;
+    --line:#E2DBCF; --line-strong:#CFC6B7;
+    --accent:#B03D19; --accent-soft:#8A2F12; --accent-wash:#b03d1914; --on-accent:#FFFFFF;
+    --ok:#3D7A3A; --warn:#8F6A12; --info:#2F55B8;
+    --sh:0 1px 2px rgba(28,22,16,.05),0 6px 22px rgba(28,22,16,.07);
+    --sh-lift:0 2px 6px rgba(28,22,16,.07),0 20px 46px rgba(28,22,16,.12);
   }
   :root[data-theme="dark"]{
-    --ground:#0D1211; --surface:#151B1A; --surface-2:#1B2221;
-    --ink:#E8ECE7; --ink-soft:#B4BBB6; --muted:#7B837E;
-    --line:#232C2A; --line-strong:#2E3937;
-    --accent:#33D4BE; --accent-soft:#6FE6D5; --accent-wash:#33d4be1a;
-    --ok:#5FC98A; --warn:#D6A24C; --info:#7C9BF2;
+    --ground:#13110F; --surface:#1B1815; --surface-2:#221E1A;
+    --ink:#EEE8DF; --ink-soft:#BFB6A9; --muted:#8A8276;
+    --line:#2B2622; --line-strong:#3A332D;
+    --accent:#F08A5D; --accent-soft:#F6AE8C; --accent-wash:#f08a5d1a; --on-accent:#1D0D06;
+    --ok:#6CC98A; --warn:#D9B24E; --info:#86A2F5;
     --sh:0 1px 2px rgba(0,0,0,.4),0 8px 26px rgba(0,0,0,.4);
     --sh-lift:0 2px 8px rgba(0,0,0,.45),0 26px 54px rgba(0,0,0,.55);
   }
@@ -68,11 +68,13 @@
     font-family:var(--sans);line-height:1.6;
     -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
     font-size:16.5px;
+    background-image:radial-gradient(circle at 1px 1px,var(--line-strong) 1px,transparent 1.4px);
+    background-size:22px 22px;
   }
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
   @media(max-width:640px){.wrap{padding:0 18px}}
   a{color:inherit;text-decoration:none}
-  ::selection{background:var(--accent);color:#fff}
+  ::selection{background:var(--accent);color:var(--on-accent)}
 
   .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;
     text-transform:uppercase;color:var(--muted);font-weight:500}
@@ -137,9 +139,7 @@
     cursor:pointer;transition:.18s;font-weight:500}
   .btn:hover{border-color:var(--accent);color:var(--accent)}
   .btn.primary{background:var(--ink);color:var(--ground);border-color:var(--ink)}
-  .btn.primary:hover{background:var(--accent);border-color:var(--accent);color:#fff}
-  :root[data-theme="dark"] .btn.primary:hover{color:#04110f}
-  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary:hover{color:#04110f}}
+  .btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
   .avail{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);
     font-size:12px;color:var(--muted)}
   .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);
@@ -241,16 +241,16 @@
   /* phone frame */
   .phonewrap{display:flex;justify-content:center}
   .phone{width:min(280px,74%);border-radius:38px;padding:9px;
-    background:linear-gradient(160deg,#2a3230,#0c100f);
+    background:linear-gradient(160deg,#2e2924,#0f0d0b);
     box-shadow:var(--sh-lift);position:relative}
-  :root[data-theme="light"] .phone{background:linear-gradient(160deg,#e7e8e2,#c2c5bb)}
-  @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .phone{background:linear-gradient(160deg,#e7e8e2,#c2c5bb)}}
+  :root[data-theme="light"] .phone{background:linear-gradient(160deg,#ebe6dc,#c9c0b1)}
+  @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .phone{background:linear-gradient(160deg,#ebe6dc,#c9c0b1)}}
   .phone .screen{border-radius:30px;overflow:hidden;background:#faf6f4;position:relative}
   .phone .screen img{display:block;width:100%;height:auto}
   .phone .notch{position:absolute;top:9px;left:50%;transform:translateX(-50%);
-    width:38%;height:22px;background:#0c100f;border-radius:0 0 14px 14px;z-index:3}
-  :root[data-theme="light"] .phone .notch{background:#c2c5bb}
-  @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .phone .notch{background:#c2c5bb}}
+    width:38%;height:22px;background:#0f0d0b;border-radius:0 0 14px 14px;z-index:3}
+  :root[data-theme="light"] .phone .notch{background:#c9c0b1}
+  @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .phone .notch{background:#c9c0b1}}
 
   /* app screenshot trio */
   .shots{display:grid;grid-template-columns:1fr 1.16fr 1fr;gap:12px;align-items:center}
@@ -279,7 +279,7 @@
   .flow .node.escrow .st{color:var(--accent)}
   .flow .n{width:20px;height:20px;border-radius:5px;background:var(--ink);color:var(--ground);
     display:grid;place-items:center;font-size:10px;flex:none}
-  .flow .node.escrow .n{background:var(--accent);color:#04110f}
+  .flow .node.escrow .n{background:var(--accent);color:var(--on-accent)}
 
   /* channel grid (urun-panel) */
   .chgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
@@ -862,7 +862,7 @@
 </footer>
 
 <script>
-  console.log("%c iam@onurbulut.dev ","background:#33D4BE;color:#06231f;font-weight:600;padding:4px 6px;border-radius:4px");
+  console.log("%c iam@onurbulut.dev ","background:#F08A5D;color:#1D0D06;font-weight:600;padding:4px 6px;border-radius:4px");
   console.log("%cHello world. Buraya baktığına göre muhtemelen anlaşırız.","color:#8b9a97");
   (function(){
     var root=document.documentElement;
