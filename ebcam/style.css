@@ -260,6 +260,25 @@ main {
   line-height: 1.6;
 }
 
+.get {
+  margin: 28px 0 0;
+}
+
+.store-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.store-btn:hover,
+.store-btn:focus-visible {
+  filter: brightness(1.08);
+}
+
 .facts {
   display: flex;
   flex-wrap: wrap;
