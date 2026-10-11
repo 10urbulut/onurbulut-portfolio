@@ -52,7 +52,7 @@ on disk and Pillow (`pip install pillow`).
 ## What's inside
 
 - **Hero** — positioning, headline stats, and per-stack experience bars.
-- **Live on the App Store** — Dersim, Mizanço, MenuPal (App Store + Google Play links).
+- **Live on the App Store** — ebcam, Dersim, Mizanço, MenuPal (App Store + Google Play links).
 - **Selected work** — LifeOS, Ürün Panel, Tamirci, Gaia Botanique (live screenshot), Nybble.
 - **Experience** — full role timeline + education.
 - **Earlier apps** — TUR Assist, Otokonfor (RS Automotive Group).
