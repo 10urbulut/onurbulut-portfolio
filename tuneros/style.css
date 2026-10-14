@@ -1,0 +1,679 @@
+/* TunerOS site: shared styles.
+   System fonts only; no external fonts, scripts or trackers.
+   Dark by default, light palette via prefers-color-scheme. */
+
+:root {
+  color-scheme: dark;
+  --bg: #0A0E12;
+  --surface: #141A21;
+  --surface-2: #1D252E;
+  --text: #F1F5F9;
+  --muted: #94A3B8;
+  --accent: #FF7A52;
+  --link: #FF8F6B;
+  --on-accent: #3B1206;
+  --line: #2A343F;
+  --radius: 16px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --bg: #F8FAFC;
+    --surface: #FFFFFF;
+    --surface-2: #F1F5F9;
+    --text: #0F172A;
+    --muted: #475569;
+    --accent: #D4451F;
+    /* Darker than the brand accent so link text keeps 4.5:1 on the light ground. */
+    --link: #B0381A;
+    --on-accent: #FFFFFF;
+    --line: #E2E8F0;
+  }
+}
+
+/* Base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 16px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.wrap {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(1.875rem, 1.45rem + 1.9vw, 2.5rem);
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  margin-top: 2.4em;
+  margin-bottom: 0.6em;
+  font-size: 1.3125rem;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 1em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+ul,
+ol {
+  padding-left: 1.3em;
+}
+
+li {
+  margin-bottom: 0.45em;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+strong {
+  font-weight: 650;
+}
+
+a {
+  color: var(--link);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.ui {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Skip link */
+
+.skip {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 10;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skip:focus {
+  top: 12px;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Header */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.brand img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+}
+
+.lang {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.lang a {
+  min-width: 2.75rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+}
+
+.lang a:hover {
+  color: var(--text);
+}
+
+.lang a[aria-current="page"] {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+/* Main */
+
+main {
+  padding-block: 44px 72px;
+}
+
+/* Support page */
+
+.hero-icon {
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 24px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+.lead {
+  margin-top: 0.75em;
+  color: var(--muted);
+  font-size: 1.1875rem;
+  line-height: 1.6;
+}
+
+.get {
+  margin: 28px 0 0;
+}
+
+.store-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.store-btn:hover,
+.store-btn:focus-visible {
+  filter: brightness(1.08);
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facts li {
+  margin: 0;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.facts li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  vertical-align: 2px;
+}
+
+/* A tuner scale with the needle resting in tune: the only ornament on the page. */
+.scale {
+  position: relative;
+  height: 22px;
+  margin-block: 40px 0;
+  background-image:
+    repeating-linear-gradient(90deg, var(--line) 0 2px, transparent 2px 60px),
+    repeating-linear-gradient(90deg, var(--line) 0 2px, transparent 2px 12px);
+  background-position: calc(50% - 1px) 0, calc(50% - 1px) 100%;
+  background-size: 100% 100%, 100% 10px;
+  background-repeat: repeat-x;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+}
+
+.scale::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  margin-left: -1.5px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.card {
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.card > :last-child {
+  margin-bottom: 0;
+}
+
+.contact .email {
+  margin: 2px 0 12px;
+  font-size: 1.25rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.contact .email a {
+  text-decoration: none;
+}
+
+.contact .email a:hover {
+  text-decoration-line: underline;
+}
+
+.contact .note {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+/* FAQ */
+
+.faq {
+  display: grid;
+  gap: 10px;
+}
+
+.faq details {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  transition: border-color 0.15s ease;
+}
+
+.faq details[open] {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+}
+
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  font-weight: 650;
+  line-height: 1.4;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "";
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: translateY(-3px) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.faq details[open] > summary::after {
+  border-color: var(--accent);
+  transform: translateY(2px) rotate(-135deg);
+}
+
+.faq .answer {
+  padding: 0 20px 18px;
+}
+
+.faq .answer > :last-child {
+  margin-bottom: 0;
+}
+
+.faq .answer ul {
+  margin-bottom: 1em;
+}
+
+/* Legal links on the support page */
+
+.doc-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.doc-link {
+  display: block;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.doc-link:hover {
+  border-color: var(--accent);
+}
+
+.doc-link .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 650;
+}
+
+.doc-link .title::after {
+  content: "\2192";
+  content: "\2192" / "";
+  color: var(--accent);
+}
+
+.doc-link .desc {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/* Legal pages */
+
+.legal h1 {
+  margin-bottom: 0.4em;
+}
+
+.legal .updated {
+  margin-bottom: 2.2em;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.legal .updated em {
+  font-style: normal;
+}
+
+.legal h2 {
+  padding-top: 0.2em;
+}
+
+.table-wrap {
+  margin: 1.5em 0;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.perm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.perm-table th,
+.perm-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.perm-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.perm-table thead th {
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.perm-table tbody th {
+  font-weight: 650;
+}
+
+/* Narrow screens: each permission becomes a small stacked card. */
+@media (max-width: 600px) {
+  .perm-table,
+  .perm-table thead,
+  .perm-table tbody,
+  .perm-table tr,
+  .perm-table th,
+  .perm-table td {
+    display: block;
+  }
+
+  .perm-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .perm-table tr {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .perm-table tbody tr:last-child {
+    border-bottom: 0;
+  }
+
+  .perm-table th,
+  .perm-table td {
+    padding: 0;
+    border: 0;
+  }
+
+  .perm-table tbody th {
+    margin-bottom: 6px;
+    font-size: 1rem;
+  }
+
+  .perm-table td + td {
+    margin-top: 8px;
+  }
+
+  /* Visual labels only; the hidden header row still names the columns. */
+  .perm-table td::before {
+    content: attr(data-label);
+    content: attr(data-label) / "";
+    display: block;
+    margin-bottom: 2px;
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-block: 28px 44px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+}
+
+.site-footer nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-footer nav a:hover {
+  color: var(--text);
+  text-decoration-line: underline;
+}
+
+.site-footer nav a[aria-current="page"] {
+  color: var(--text);
+}
+
+.site-footer .sep {
+  opacity: 0.6;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Motion and print */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+
+@media print {
+  :root {
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-2: #FFFFFF;
+    --text: #000000;
+    --muted: #333333;
+    --link: #000000;
+    --line: #BBBBBB;
+  }
+
+  .skip,
+  .lang,
+  .site-footer nav,
+  .scale {
+    display: none;
+  }
+
+  body {
+    font-size: 11pt;
+  }
+
+  main {
+    padding-block: 16px;
+  }
+}
