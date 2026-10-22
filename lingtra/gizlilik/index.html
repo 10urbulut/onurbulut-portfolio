@@ -2,70 +2,10 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lingtra Gizlilik Politikası</title>
-<meta name="description" content="Lingtra hangi bilgileri nerede saklar, yapay zekâ önerileri ve yedekler nasıl çalışır.">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#FFFDF8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1C1612" media="(prefers-color-scheme: dark)">
-<link rel="icon" type="image/png" href="../icon.png">
-<link rel="apple-touch-icon" href="../icon.png">
-<link rel="alternate" hreflang="tr" href="index.html">
-<link rel="alternate" hreflang="en" href="../en/privacy/index.html">
-<link rel="stylesheet" href="../style.css">
+<title>Lingtra</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://lingtra.app/gizlilik/">
+<meta http-equiv="refresh" content="0; url=https://lingtra.app/gizlilik/">
 </head>
-<body>
-<a class="skip" href="#main">İçeriğe geç</a>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="../index.html"><img src="../icon.png" width="32" height="32" alt=""><span>Lingtra</span></a>
-    <nav class="lang" aria-label="Dil"><a href="index.html" hreflang="tr" lang="tr" aria-current="page">TR</a><a href="../en/privacy/index.html" hreflang="en" lang="en">EN</a></nav>
-  </div>
-</header>
-
-<main id="main" tabindex="-1">
-  <div class="wrap">
-    <article class="legal">
-      <h1>Lingtra Gizlilik Politikası</h1>
-      <p class="updated"><em>Son güncelleme: 22 Ekim 2026</em></p>
-      <p>Bu politika, Onur Bulut ("geliştirici", "biz") tarafından yayımlanan, Mac ve iPad için <strong>Lingtra</strong> uygulamasının ("Uygulama") hangi bilgileri nasıl işlediğini açıklar.</p>
-      <h2>1. Kısaca</h2>
-      <ul><li>Lingtra <strong>kişisel veri toplamaz</strong>. Hesap açmanız gerekmez.</li><li>Belgeleriniz, çevirileriniz, çeviri belleğiniz ve terimleriniz <strong>yalnızca cihazınızda</strong> saklanır; bize gönderilmez. Geliştiricinin bu uygulama için çalıştırdığı bir sunucu yoktur.</li><li>Uygulamada <strong>reklam, analitik ya da izleme yoktur</strong>.</li><li><strong>İsteğe bağlı</strong> yapay zekâ önerilerini kendi API anahtarınızla açarsanız, çevirdiğiniz cümle ve eşleşen terimler cihazınızdan doğrudan seçtiğiniz sağlayıcıya (Google Gemini, OpenAI ya da DeepL) gider (Bölüm 4).</li><li>Satın almalar Apple tarafından işlenir (Bölüm 5).</li></ul>
-      <h2>2. Cihazınızda saklanan bilgiler</h2>
-      <p>Şunlar, Uygulamanın korumalı alanı (sandbox) içindeki yerel bir veritabanında tutulur:</p>
-      <ul><li>açtığınız Word belgesinin bir kopyası, cümlelere ayrılmış hâli ve çevirileriniz,</li><li>çeviri belleği (onayladığınız kaynak–çeviri çiftleri) ve terim tabanı,</li><li>uygulama ayarları.</li></ul>
-      <p>Bu veriler cihazınızdan çıkmaz. Bir projeyi Uygulama içinden silebilirsiniz. iPad'de Uygulamayı silmek tüm verilerini de siler. Mac'te her şeyi silmek için Uygulamayı kaldırdıktan sonra <code>~/Library/Containers/dev.onurbulut.lingtra</code> klasörünü de silin (macOS, uygulamayı Çöp Sepeti'ne taşımakla bu klasörü silmez). Cihazınızın kendi yedekleri (ör. Time Machine ya da iCloud cihaz yedeği) bu verileri yedekleyebilir; bu, sizin kontrolünüzdeki bir işlemdir.</p>
-      <p>Uygulama yalnızca sizin seçtiğiniz dosyaları açar ve yalnızca sizin seçtiğiniz konuma kaydeder (DOCX, TMX, CSV).</p>
-      <h2>3. Yedekler</h2>
-      <p>“Yedek al” komutu projelerinizi, çeviri belleğinizi ve terimlerinizi içeren bir <code>.lingtra</code> dosyası oluşturur. Bu dosyayı nereye kaydedeceğinize (ör. iCloud Drive, başka bir bulut klasörü ya da harici bir disk) <strong>siz karar verirsiniz</strong>; dosya bizim sunucumuza gönderilmez. Dosyayı sakladığınız hizmetin kendi koşulları geçerlidir.</p>
-      <p>Bir yedeği başka bir cihaza (Mac ya da iPad) yüklediğinizde, o cihazdaki yerel verilerin <strong>yerini alır</strong>. Yüklemeden önce mevcut veriler aynı cihazda ayrı bir dosyaya kaydedilir. <strong>API anahtarları yedeğe dahil edilmez.</strong></p>
-      <h2>4. Kendi anahtarınızla yapay zekâ önerileri (isteğe bağlı)</h2>
-      <p>Bu özellik varsayılan olarak kapalıdır. Ayarlar'da kendi <strong>Google Gemini</strong>, <strong>OpenAI</strong> ya da <strong>DeepL</strong> API anahtarınızı girerseniz:</p>
-      <ul><li>Anahtarınız yalnızca cihazınızda, sistemin <strong>anahtar zincirinde (Keychain)</strong> saklanır; anahtar zinciri kullanılamazsa Uygulamanın yerel veritabanında tutulur. Her iki durumda da bize gönderilmez ve yedeğe girmez.</li><li>Bir öneri istediğinizde (ya da otomatik öneriyi açtıysanız bir cümleye geçtiğinizde) <strong>yalnızca çevrilen cümle</strong> ve o cümleyle <strong>eşleşen terimleriniz</strong>, cihazınızdan <strong>doğrudan</strong> seçtiğiniz sağlayıcıya gönderilir. Belgenin geri kalanı gönderilmez.</li><li>Bu aktarım bizim üzerimizden geçmez; Lingtra'nın sunucusu yoktur, metninizi göremeyiz ve saklamayız.</li><li>Gönderilen metin, sizin o sağlayıcıyla olan sözleşmeniz ve <strong>sağlayıcının kendi gizlilik politikası</strong> kapsamında işlenir. Yapay zekâ kullanım ücreti Lingtra aboneliğine dahil değildir.</li></ul>
-      <p>Sağlayıcıların politikaları: Google — <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a> · OpenAI — <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a> · DeepL — <a href="https://www.deepl.com/privacy">https://www.deepl.com/privacy</a></p>
-      <p>Bu özelliği kullanmazsanız çeviri içeriğiniz cihazınızdan hiçbir yere gönderilmez.</p>
-      <h2>5. Satın almalar</h2>
-      <p>Lingtra ücretsiz sürümde tüm özellikleri 1 proje ve 500 terimle sunar. Lingtra Pro, otomatik yenilenen yıllık bir abonelik olarak Apple'ın App Store'u üzerinden satılır. Ödeme ve abonelik bilgileri <strong>Apple tarafından işlenir</strong>; geliştirici kart bilgilerinizi ya da kimliğinizi görmez. Uygulama Apple'dan yalnızca aboneliğin etkin olup olmadığı bilgisini alır. Aboneliği App Store hesap ayarlarınızdaki Abonelikler bölümünden yönetebilir ve iptal edebilirsiniz. Apple'ın veri uygulamaları: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></p>
-      <h2>6. Çocuklar</h2>
-      <p>Uygulama çocuklara yönelik değildir ve kimseden kişisel veri toplamaz.</p>
-      <h2>7. Haklarınız (KVKK / GDPR)</h2>
-      <p>Kişisel veri toplamadığımız için elimizde size ait silinecek, düzeltilecek ya da aktarılacak bir kayıt yoktur; tüm veriler cihazınızda ve sizin kontrolünüzdedir. Yapay zekâ sağlayıcısına gönderilen metinlerle ilgili talepler o sağlayıcıya, satın almalarla ilgili talepler Apple'a yöneltilebilir. 6698 sayılı KVKK ve GDPR kapsamındaki sorularınız için bize yazabilirsiniz.</p>
-      <h2>8. Değişiklikler</h2>
-      <p>Bu politikayı güncellediğimizde bu sayfadaki "Son güncelleme" tarihini değiştiririz. Önemli bir değişiklik (ör. yeni bir veri işleme) olursa Uygulama içinde de bildiririz.</p>
-      <h2>9. İletişim</h2>
-      <p>Onur Bulut · <a href="mailto:help@onurbulut.dev">help@onurbulut.dev</a> · <a href="https://onurbulut.dev">https://onurbulut.dev</a></p>
-    </article>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <nav aria-label="Site bağlantıları">
-      <a href="../index.html">Destek</a><span class="sep" aria-hidden="true">·</span>
-      <a href="index.html" aria-current="page">Gizlilik</a>
-    </nav>
-    <p>© 2026 Onur Bulut</p>
-  </div>
-</footer>
-</body>
+<body><p><a href="https://lingtra.app/gizlilik/">https://lingtra.app/gizlilik/</a></p></body>
 </html>
