@@ -57,7 +57,7 @@ on disk and Pillow (`pip install pillow`).
 - **AI** — Lingtra (Gemini / OpenAI / DeepL behind one engine) and how I build with AI agents.
 - **Selected work** — Pazar Paneli, Gaia Botanique, Nybble, Hepsi Ahşap Factory, FEED studio.
 
-Type: Newsreader (display), Geist (text), Geist Mono — latin + latin-ext woff2, inlined.
+Type: Geist (headings and text), Geist Mono — latin + latin-ext woff2, inlined.
 - **Experience** — full role timeline + education.
 - **Earlier apps** — TUR Assist, Otokonfor (RS Automotive Group).
 - **How I work** and **Contact**.
