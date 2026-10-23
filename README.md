@@ -51,9 +51,13 @@ on disk and Pillow (`pip install pillow`).
 
 ## What's inside
 
-- **Hero** — positioning, headline stats, and per-stack experience bars.
-- **Live on the App Store** — ebcam, Dersim, Mizanço, MenuPal (App Store + Google Play links).
-- **Selected work** — LifeOS, Ürün Panel, Tamirci, Gaia Botanique (live screenshot), Nybble.
+- **Hero** — AI-first positioning, headline stats, and per-stack experience bars.
+- **Live in the stores** — ebcam, Dersim, Mizanço, MenuPal, AhşapMetrik; plus Petly, Huebloom and
+  TunerOS (live on Google Play, iOS in review).
+- **AI** — Lingtra (Gemini / OpenAI / DeepL behind one engine) and how I build with AI agents.
+- **Selected work** — Pazar Paneli, Gaia Botanique, Nybble, Hepsi Ahşap Factory, FEED studio.
+
+Type: Instrument Serif (display), Geist (text), Geist Mono — latin + latin-ext woff2, inlined.
 - **Experience** — full role timeline + education.
 - **Earlier apps** — TUR Assist, Otokonfor (RS Automotive Group).
 - **How I work** and **Contact**.
