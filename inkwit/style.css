@@ -1,0 +1,94 @@
+/* Inkwit site: shared styles.
+   Riso Kolaj: paper ground, ink outlines, pink/teal/sun accents.
+   Font: Bricolage Grotesque (the app's own font, OFL, self-hosted). No external scripts or trackers. */
+
+@font-face {
+  font-family: "Bricolage";
+  src: url("bricolage.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --paper: #F3EADB;
+  --paper-2: #EADFCB;
+  --ink: #17140F;
+  --white: #FFFDF8;
+  --pink: #FF4FA3;
+  --teal: #00A19A;
+  --sun: #FFE14D;
+  --muted: #5E574B;
+  /* Deep teal keeps link text above 4.5:1 on paper. */
+  --link: #00625D;
+  --font: "Bricolage", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 500 17px/1.6 var(--font);
+}
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
+
+.skip { position: absolute; left: -999px; top: 8px; background: var(--white); padding: 8px 12px; border: 3px solid var(--ink); border-radius: 12px; }
+.skip:focus { left: 16px; }
+
+.site-header { padding: 18px 0; border-bottom: 3px solid var(--ink); background: var(--paper); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+.brand img { border-radius: 9px; border: 2px solid var(--ink); }
+.lang { display: flex; gap: 6px; }
+.lang a { color: var(--ink); text-decoration: none; font-weight: 700; padding: 4px 12px; border: 2.5px solid var(--ink); border-radius: 14px; background: var(--white); }
+.lang a[aria-current="page"] { background: var(--ink); color: var(--paper); }
+
+main { padding: 32px 0 48px; }
+
+h1 { font-weight: 800; font-size: clamp(32px, 7vw, 48px); line-height: 1.05; letter-spacing: -0.03em; margin: 12px 0 14px; }
+h2 { font-weight: 800; font-size: 24px; letter-spacing: -0.02em; margin: 36px 0 10px; }
+p, li { max-width: 68ch; }
+
+.hero-icon { border-radius: 22px; border: 3px solid var(--ink); box-shadow: 4px 5px 0 var(--ink); }
+.lead { font-size: 19px; font-weight: 600; }
+
+.card {
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  box-shadow: 4px 5px 0 var(--ink);
+  padding: 18px 20px;
+  margin: 16px 0;
+}
+
+.facts { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.facts li { background: var(--sun); border: 2.5px solid var(--ink); border-radius: 14px; padding: 4px 12px; font-weight: 700; font-size: 15px; }
+.facts li:nth-child(2n) { background: var(--white); }
+
+.email { font-size: 20px; font-weight: 800; }
+
+.legal h2 { font-size: 21px; }
+.legal ul { padding-left: 22px; }
+.legal li { margin: 6px 0; }
+.updated { color: var(--muted); }
+.legal .short { background: var(--white); border: 3px solid var(--ink); border-radius: 18px; box-shadow: 4px 5px 0 var(--teal); padding: 14px 20px 14px 38px; }
+
+.doc-links { display: grid; gap: 12px; }
+.doc-link { display: block; text-decoration: none; color: var(--ink); background: var(--white); border: 3px solid var(--ink); border-radius: 18px; box-shadow: 4px 5px 0 var(--ink); padding: 14px 18px; }
+.doc-link .title { display: block; font-weight: 800; font-size: 18px; }
+.doc-link .desc { display: block; color: var(--muted); font-size: 15px; }
+.doc-link:active { transform: translate(4px, 5px); box-shadow: none; }
+
+.site-footer { border-top: 3px solid var(--ink); padding: 20px 0 32px; color: var(--muted); font-size: 15px; }
+.site-footer nav a { color: var(--ink); }
+.site-footer .sep { margin: 0 8px; }
+
+@media (prefers-reduced-motion: reduce) { .doc-link:active { transform: none; } }
